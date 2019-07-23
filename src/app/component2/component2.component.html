@@ -1,0 +1,13 @@
+<h4 appFirstDirective>Practica Will</h4>
+
+
+<ul *ngFor="let person of people" >
+  <div [ngSwitch]="person.country">
+
+  <li *ngSwitchCase="'UK'"  [ngClass]="'text-success'">{{person.name}} {{person.country}}</li>
+  <li *ngSwitchCase="'USA'"  [ngClass]="'text-danger'">{{person.name}} {{person.country}}</li>
+  <li *ngSwitchCase="'HK'" [ngClass]="'text-submit'">{{person.name}} {{person.country}}</li>
+  <li *ngSwitchDefault [ngClass]="'text-default'">{{person.name}} {{person.country}}</li>
+  </div>
+</ul>
+
